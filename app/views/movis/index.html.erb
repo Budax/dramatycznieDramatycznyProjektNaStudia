@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Country</th>
+      <th>Film genre</th>
+      <th>Director</th>
+      <th>Actors</th>
+      <th>Comments</th>
+      <th>Reports</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movis.each do |movi| %>
+      <tr>
+        <td><%= movi.title %></td>
+        <td><%= movi.year %></td>
+        <td><%= movi.country %></td>
+        <td><%= movi.film_genre %></td>
+        <td><%= movi.director %></td>
+        <td><%= movi.actors %></td>
+        <td><%= movi.comments %></td>
+        <td><%= movi.reports %></td>
+        <td><%= link_to 'Show', movi %></td>
+        <td><%= link_to 'Edit', edit_movi_path(movi) %></td>
+        <td><%= link_to 'Destroy', movi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movi', new_movi_path %>

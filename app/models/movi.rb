@@ -1,0 +1,2 @@
+class Movi < ApplicationRecord
+end

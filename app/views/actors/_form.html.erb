@@ -1,0 +1,76 @@
+<%= form_for(actor) do |f| %>
+  <% if actor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(actor.errors.count, "error") %> prohibited this actor from being saved:</h2>
+
+      <ul>
+      <% actor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.number_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateOfBirth %>
+    <%= f.date_select :dateOfBirth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dateOfDeath %>
+    <%= f.date_select :dateOfDeath %>
+  </div>
+
+  <div class="field">
+    <%= f.label :img %>
+    <%= f.text_field :img %>
+  </div>
+
+  <div class="field">
+<!-- 
+    <%= f.label :films %>
+    <%= collection_select(:films, :id, @users, :id, :name,{},{:multiple => true}) %>  -->
+
+    <%= f.select(:films, [['Type A', 'Type A'],
+                                  ['Type B', 'Type B'],
+                                  ['Type C', 'Type C'],
+                                  ['Type D', 'Type D'],
+                                  ['Type E', 'Type E']
+                                 ],{ :prompt => "Please select"},
+                                   { :multiple => true, :size => 5 }
+                                 ) %>
+
+
+  </div>
+
+
+  <div calss="field">  
+  
+  </div>
+
+  <div class="field"> 
+    <%= f.label :role %>
+   
+  </div>
+  <div class="actions">
+
+
+    <%= f.submit %>
+  </div>
+<% end %>
+

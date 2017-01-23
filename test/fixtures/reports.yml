@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desc: MyText
+  user: 1
+  actor: 1
+  movie: 1
+
+two:
+  desc: MyText
+  user: 1
+  actor: 1
+  movie: 1

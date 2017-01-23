@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @actor.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @actor.surname %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @actor.country %>
+</p>
+
+<p>
+  <strong>Dateofbirth:</strong>
+  <%= @actor.dateOfBirth %>
+</p>
+
+<p>
+  <strong>Dateofdeath:</strong>
+  <%= @actor.dateOfDeath %>
+</p>
+
+<p>
+  <strong>Img:</strong>
+  <%= @actor.img %>
+</p>
+
+<p>
+  <strong>Films:</strong>
+  <%= @actor.films %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @actor.role %>
+</p>
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

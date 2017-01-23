@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movi.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movi.year %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @movi.country %>
+</p>
+
+<p>
+  <strong>Film genre:</strong>
+  <%= @movi.film_genre %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @movi.director %>
+</p>
+
+<p>
+  <strong>Actors:</strong>
+  <%= @movi.actors %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @movi.comments %>
+</p>
+
+<p>
+  <strong>Reports:</strong>
+  <%= @movi.reports %>
+</p>
+
+<%= link_to 'Edit', edit_movi_path(@movi) %> |
+<%= link_to 'Back', movis_path %>
